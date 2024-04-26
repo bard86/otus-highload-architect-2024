@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: "profiles"
+  liquibase:
+    parameters:
+      textColumnType: VARCHAR(250)
