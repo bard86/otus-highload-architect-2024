@@ -1,6 +1,11 @@
 spring:
   application:
-    name: "profiles"
+    name: profiles
   liquibase:
     parameters:
       textColumnType: VARCHAR(250)
+  datasource:
+    type: org.springframework.jdbc.datasource.SimpleDriverDataSource
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    password: secret
+    username: myuser
