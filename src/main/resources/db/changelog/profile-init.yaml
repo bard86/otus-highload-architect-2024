@@ -11,24 +11,31 @@ databaseChangeLog:
         - createTable:
             columns:
               - column:
-                  autoIncrement: true
+                  defaultValue: "uuid_generate_v4()"
                   constraints:
                     nullable: false
                     primaryKey: true
                     primaryKeyName: user_pkey
                   name: id
-                  type: BIGINT
+                  type: uuid
               - column:
                   constraints:
                     nullable: false
                   name: password
                   type: ${textColumnType}
               - column:
-                  constraints:
-                    nullable: false
                   name: first_name
                   type: ${textColumnType}
               - column:
                   name: last_name
+                  type: ${textColumnType}
+              - column:
+                  name: birthdate
+                  type: date
+              - column:
+                  name: city
+                  type: ${textColumnType}
+              - column:
+                  name: biography
                   type: ${textColumnType}
             tableName: users

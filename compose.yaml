@@ -20,6 +20,8 @@ services:
         limits:
           cpus: '1'
           memory: 1G
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d/
     networks:
       - postgres
 
