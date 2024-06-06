@@ -6,6 +6,12 @@ spring:
       textColumnType: VARCHAR(250)
   datasource:
     type: org.springframework.jdbc.datasource.SimpleDriverDataSource
-    url: jdbc:postgresql://localhost:5432/mydatabase
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
     password: secret
-    username: myuser
+
+application:
+  base-path: /api/v1
+
+server:
+  port: 8080
